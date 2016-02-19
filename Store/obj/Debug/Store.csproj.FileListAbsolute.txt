@@ -1,0 +1,8 @@
+c:\users\administrator\documents\visual studio 2013\Projects\Store\Store\bin\Debug\Store.exe.config
+c:\users\administrator\documents\visual studio 2013\Projects\Store\Store\obj\Debug\Store.Form1.resources
+c:\users\administrator\documents\visual studio 2013\Projects\Store\Store\obj\Debug\Store.Properties.Resources.resources
+c:\users\administrator\documents\visual studio 2013\Projects\Store\Store\obj\Debug\Store.csproj.GenerateResource.Cache
+c:\users\administrator\documents\visual studio 2013\Projects\Store\Store\bin\Debug\Store.exe
+c:\users\administrator\documents\visual studio 2013\Projects\Store\Store\bin\Debug\Store.pdb
+c:\users\administrator\documents\visual studio 2013\Projects\Store\Store\obj\Debug\Store.exe
+c:\users\administrator\documents\visual studio 2013\Projects\Store\Store\obj\Debug\Store.pdb

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="marketModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Basket">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="history_id" Type="int" Nullable="false" />
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="quantity" Type="float" Nullable="false" />
+    <Property Name="price" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="History">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sum" Type="float" Nullable="false" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="cost" Type="float" Nullable="false" />
+    <Property Name="quantity" Type="float" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'market.dbo.ViewBasket' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ViewBasket">
+    <Key>
+      <PropertyRef Name="history_id" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="product_id" />
+      <PropertyRef Name="quantity" />
+      <PropertyRef Name="price" />
+      <PropertyRef Name="Total" />
+    </Key>
+    <Property Name="history_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="quantity" Type="float" Nullable="false" />
+    <Property Name="price" Type="float" Nullable="false" />
+    <Property Name="Total" Type="float" Nullable="false" />
+  </EntityType>
+  <Function Name="GiveMeBasket" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numb" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="marketModelStoreContainer">
+    <EntitySet Name="Basket" EntityType="Self.Basket" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="History" EntityType="Self.History" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ViewBasket" EntityType="Self.ViewBasket" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[ViewBasket].[history_id] AS [history_id], 
+[ViewBasket].[name] AS [name], 
+[ViewBasket].[product_id] AS [product_id], 
+[ViewBasket].[quantity] AS [quantity], 
+[ViewBasket].[price] AS [price], 
+[ViewBasket].[Total] AS [Total]
+FROM [dbo].[ViewBasket] AS [ViewBasket]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

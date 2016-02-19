@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="marketModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Basket">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="history_id" Type="Int32" Nullable="false" />
+    <Property Name="product_id" Type="Int32" Nullable="false" />
+    <Property Name="quantity" Type="Double" Nullable="false" />
+    <Property Name="price" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="History">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sum" Type="Double" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="cost" Type="Double" Nullable="false" />
+    <Property Name="quantity" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ViewBasket">
+    <Key>
+      <PropertyRef Name="history_id" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="product_id" />
+      <PropertyRef Name="quantity" />
+      <PropertyRef Name="price" />
+      <PropertyRef Name="Total" />
+    </Key>
+    <Property Name="history_id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="product_id" Type="Int32" Nullable="false" />
+    <Property Name="quantity" Type="Double" Nullable="false" />
+    <Property Name="price" Type="Double" Nullable="false" />
+    <Property Name="Total" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="marketEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Basket" EntityType="Self.Basket" />
+    <EntitySet Name="History" EntityType="Self.History" />
+    <EntitySet Name="Products" EntityType="Self.Products" />
+    <EntitySet Name="ViewBasket" EntityType="Self.ViewBasket" />
+    <FunctionImport Name="GiveMeBasket" ReturnType="Collection(marketModel.GiveMeBasket_Result)">
+      <Parameter Name="numb" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="GiveMeBasket_Result">
+    <Property Type="Int32" Name="history_id" Nullable="false" />
+    <Property Type="String" Name="name" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="product_id" Nullable="false" />
+    <Property Type="Double" Name="quantity" Nullable="false" />
+    <Property Type="Double" Name="price" Nullable="false" />
+    <Property Type="Double" Name="Total" Nullable="false" />
+  </ComplexType>
+</Schema>
