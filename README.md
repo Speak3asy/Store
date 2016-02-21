@@ -19,6 +19,7 @@ p.s. Projektas.pdf is a task, what I have to do. Feel free to read and contribut
 ## History
 
 v1.00 - Few classes and interfaces. Few functions to pull data from database.
+v1.01 - Added timer to update ListView. Added controls and input validation for adding produtct to database. Adding to database isn't implemented yet.
 
 ## Credits
 
