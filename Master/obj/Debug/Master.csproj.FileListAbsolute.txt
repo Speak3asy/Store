@@ -12,3 +12,14 @@ C:\Users\Administrator\documents\visual studio 2013\Projects\Store\Master\obj\De
 C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Store\Master\bin\Debug\Master.exe.config
 C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Store\Master\obj\Debug\Master.exe
 C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Store\Master\obj\Debug\Master.pdb
+D:\GitHub\Store\Master\bin\Debug\Master.exe.config
+D:\GitHub\Store\Master\obj\Debug\Master.exe
+D:\GitHub\Store\Master\obj\Debug\Master.pdb
+D:\GitHub\Store\Master\bin\Debug\Master.exe
+D:\GitHub\Store\Master\bin\Debug\Master.pdb
+D:\GitHub\Store\Master\bin\Debug\EntityFramework.dll
+D:\GitHub\Store\Master\bin\Debug\EntityFramework.xml
+D:\GitHub\Store\Master\obj\Debug\Master.csprojResolveAssemblyReference.cache
+D:\GitHub\Store\Master\obj\Debug\Master.Form1.resources
+D:\GitHub\Store\Master\obj\Debug\Master.Properties.Resources.resources
+D:\GitHub\Store\Master\obj\Debug\Master.csproj.GenerateResource.Cache

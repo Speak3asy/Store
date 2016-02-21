@@ -6,3 +6,6 @@ c:\users\administrator\documents\visual studio 2013\Projects\Store\Store\bin\Deb
 c:\users\administrator\documents\visual studio 2013\Projects\Store\Store\bin\Debug\Store.pdb
 c:\users\administrator\documents\visual studio 2013\Projects\Store\Store\obj\Debug\Store.exe
 c:\users\administrator\documents\visual studio 2013\Projects\Store\Store\obj\Debug\Store.pdb
+D:\GitHub\Store\Store\bin\Debug\Store.exe.config
+D:\GitHub\Store\Store\obj\Debug\Store.exe
+D:\GitHub\Store\Store\obj\Debug\Store.pdb
