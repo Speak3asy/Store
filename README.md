@@ -22,9 +22,29 @@ v1.00 - Few classes and interfaces. Few functions to pull data from database.
 
 v1.01 - Added timer to update ListView. Added controls and input validation for adding produtct to database. Adding to database isn't implemented yet.
 
+v1.02 - A mass update!
+	
+	* Add product is working. Input validation implemented.
+	* Edit product is working. Input validation implemented.
+	* Added Legend groupbox to explain colors.
+	* Clicking warehouse item auto-fills Edit form.
+	* Working checkout history.
+	* Clicking history item auto-fills basket items and shows total sum.
+
+## TODO
+
+For Master program (80/100 completed):
+	
+	* Tweak Warehouse and Checkout History listview updating.
+	* Implement gratis, bonus system. etc. Buy 2 for 1 price.
+
+For Terminal program (0/100 completed):
+
+	* Will update this later.
+
 ## Credits
 
-Minsoft (c)
+Mindsoft (c)
 
 ## License
 
